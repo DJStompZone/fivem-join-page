@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MooseWRLD Roleplay — Join</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:title" content="MooseWRLD Roleplay" />
+  <meta property="og:description" content="Click to join MooseWRLD Roleplay on FiveM." />
+  <meta property="og:image" content="https://servers-live.fivem.net/servers/icon/dmqgmq/-1427075111.png" />
+  <link rel="icon" type="image/png" href="https://servers-live.fivem.net/servers/icon/dmqgmq/-1427075111.png" />
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#0f1421;
+      --ink:#b8d9ff;
+      --muted:#7fbbe6;      
+      --accent:#14d4ff;    
+      --accent-2:#7289DA;
+      --border:#1b2b3f;
+      --ink-dim:#8aa3c2;
+
+      --bgx: 50%;
+      --bgy: -10%;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 600px at var(--bgx) var(--bgy), #0e1828 0%, var(--bg) 60%),
+        linear-gradient(180deg, #0b0f1700, #0b0f1700 60%, #09111d66 100%);
+      color:var(--ink);
+      font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, "Fira Code", monospace;
+      display:grid; place-items:center; padding:20px;
+
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes drift{
+      0%   { --bgx: 50%; --bgy: -10%; }
+      50%  { --bgx: 52%; --bgy: 0%; }
+      100% { --bgx: 48%; --bgy: -6%; }
+    }
+
+    .card{
+      width:min(800px, 92vw);
+      background:linear-gradient(180deg, #0f1726 0%, var(--card) 100%);
+      border:1px solid var(--border);
+      border-radius:14px;
+      box-shadow: 0 10px 40px rgba(0,0,0,.45), inset 0 0 60px rgba(20,212,255,.04);
+      overflow:hidden;
+    }
+    .bar{
+      display:flex; align-items:center; gap:12px;
+      padding:14px 16px;
+      background:linear-gradient(90deg, rgba(20,212,255,.18), rgba(46,230,166,.18));
+      border-bottom:1px solid var(--border);
+    }
+    .bar img{height:30px; width:30px; border-radius:6px}
+    .title{
+      font-weight:800; letter-spacing:.3px; text-transform:uppercase;
+      color:#e7f4ff; text-shadow:0 0 12px rgba(20,212,255,.25);
+    }
+    .wrap{padding:18px; display:grid; gap:16px}
+    .row{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content: center;}
+    .stat{
+      display:inline-flex; align-items:center; gap:8px; color:var(--ink-dim);
+      border:1px solid var(--border); padding:8px 10px; border-radius:10px; background:#0b1322;
+    }
+    .dot{width:9px; height:9px; border-radius:50%; background:var(--accent)}
+    .btn{
+      position: relative;
+      overflow: hidden;
+      appearance:none; border:1px solid var(--border); background:#acbaba22; color:var(--ink); min-width: 20ch;
+      padding:12px 16px; border-radius:12px; font-weight:700; cursor:pointer; user-select:none; font-size: 1.1em;text-align: center; justify-content: center;
+      text-decoration:none; display:inline-flex; align-items:center; gap:10px;
+      transition:border-color .2s ease, transform .04s ease, box-shadow .2s ease;
+      box-shadow: 0 0 0 rgba(20,212,255,0);
+    }
+    .btn:hover{border-color:var(--accent); box-shadow:0 0 18px rgba(20,212,255,.18)}
+    .btn:active{transform:translateY(1px)}
+    .btn.primary{
+      background:linear-gradient(180deg, #0f2740 0%, #0a1e34 100%);
+      border-color:#1f3b5a;
+    }
+    .btn.blurp{border-color:#7289DAda; background:#7289DA33}
+    .btn.cfx{border-color:#ff9a0099; background:#ff9a0020}
+
+    .btnglint::before{
+      content:"";
+      position:absolute;
+      top:-50%; left:-50%;
+      width:200%; height:200%;
+      background:linear-gradient(120deg, transparent 0%, rgba(250,250,255,.25) 40%, rgba(250,250,255,.45) 50%, rgba(250,250,255,.25) 60%, transparent 100%);
+      transform:translateX(-100%) rotate(20deg);
+      animation: glint 4.6s infinite alternate;
+      pointer-events:none;
+    }
+    .btnglint-second::before{
+        content:"";
+      position:absolute;
+      top:-50%; left:-50%;
+      width:200%; height:200%;
+      background:linear-gradient(120deg, transparent 0%, rgba(250,250,255,.25) 40%, rgba(250,250,255,.45) 50%, rgba(250,250,255,.25) 60%, transparent 100%);
+      transform:translateX(-100%) rotate(20deg);
+      animation: glint 4.6s 200ms infinite alternate;
+      pointer-events:none;
+    }
+    .btnglint-third::before{
+         content:"";
+      position:absolute;
+      top:-50%; left:-50%;
+      width:200%; height:200%;
+      background:linear-gradient(120deg, transparent 0%, rgba(250,250,255,.25) 40%, rgba(250,250,255,.45) 50%, rgba(250,250,255,.25) 60%, transparent 100%);
+      transform:translateX(-100%) rotate(20deg);
+      animation: glint 4.6s 400ms infinite alternate;
+      pointer-events:none;
+    }
+    .btnglint-fourth::before{
+         content:"";
+      position:absolute;
+      top:-50%; left:-50%;
+      width:200%; height:200%;
+      background:linear-gradient(120deg, transparent 0%, rgba(250,250,255,.25) 40%, rgba(230,230,255,.45) 50%, rgba(250,250,255,.25) 60%, transparent 100%);
+      transform:translateX(-100%) rotate(20deg);
+      animation: glint 4.6s 600ms infinite alternate;
+      pointer-events:none;
+    }
+    @keyframes glint{
+      0%{transform:translateX(-100%) rotate(20deg)}
+      40%,100%{transform:translateX(100%) rotate(20deg)}
+    }
+
+    .kbd{
+      font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, "Fira Code", monospace;
+      background:#0a1220; border:1px solid var(--border); border-radius:8px; padding:4px 6px; color:var(--muted)
+    }
+
+    .collapse{
+      display:none;
+      height:0;
+      overflow:hidden;
+      transition: height .35s ease;
+    }
+    .collapse.open{ display:block; }
+
+    .hint{
+      color:var(--ink-dim); font-size:14px;
+      opacity:0; transform:translateY(6px);
+      transition: opacity .35s ease, transform .35s ease;
+    }
+    .collapse.open .hint{
+      opacity:1; transform:translateY(0);
+    }
+
+    .footer{display:flex; flex-direction:column; padding:10px 8px; border-top:1px solid var(--border); color:var(--ink-dim); font-size:11px; align-items:center; }
+    .footer-line{flex-direction:row; justify-content:space-between; align-items:center;}
+    .designer {font-size: 9px; margin-top: 0.25em;}
+    .glow{
+      position:absolute; inset:auto; pointer-events:none; filter:blur(40px); opacity:.4;
+      animation: floaty 18s ease-in-out infinite alternate;
+    }
+    .glow:nth-of-type(1){ animation-duration: 22s; }
+    .glow:nth-of-type(2){ animation-duration: 26s; animation-delay: -4s; }
+
+    @keyframes floaty{
+      0%   { transform: translate3d(0,0,0) scale(1);   opacity:.38; }
+      100% { transform: translate3d(6px,-8px,0) scale(1.02); opacity:.46; }
+    }
+
+    .grid{
+      position:absolute; inset:0; background:
+        linear-gradient(to right, rgba(20,212,255,.06) 1px, transparent 1px) 0 0/40px 40px,
+        linear-gradient(to bottom, rgba(20,212,255,.06) 1px, transparent 1px) 0 0/40px 40px;
+      mask-image: radial-gradient(70% 70% at 50% 30%, #000 40%, transparent 100%);
+      opacity:.6; pointer-events:none;
+      animation: gridScroll 40s linear infinite;
+    }
+    @keyframes gridScroll{
+      0%{ background-position:0 0, 0 0 }
+      100%{ background-position:80px 80px, 80px 80px }
+    }
+
+    footer > span {text-align:center; font-size:.7em; color:var(--muted);}
+    .faccent {color:var(--accent);}
+    .faccent-alt {color:var(--accent-2);}
+    .stage{position:relative}
+
+    .btn, button.btn, a.btn {
+        font: inherit;
+        line-height: 1.15;
+        min-height: 48px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="grid" aria-hidden="true"></div>
+
+  <main class="card stage">
+    <div class="bar">
+      <img src="https://servers-live.fivem.net/servers/icon/dmqgmq/-1427075111.png" alt="MooseWRLD logo" />
+      <div class="title">MooseWRLD Roleplay</div>
+    </div>
+
+    <div class="wrap">
+      <div id="status" class="stat">
+        <span class="dot" id="dot"></span>
+        <span id="statusText">Attempting to open FiveM client...</span>
+      </div>
+
+      <div class="row">
+        <a id="joinBtn" class="btn primary btnglint" href="fivem://connect/cfx.re/join/dmqgmq" rel="noopener">
+          ▶ Join Server
+        </a>
+        <a class="btn cfx btnglint-second" href="https://cfx.re/join/dmqgmq" target="_blank" rel="noopener">
+          🔗 Open cfx.re
+        </a>
+        <button id="copyBtn" class="btn btnglint-third" type="button">📋 Copy Link</button>
+        <a class="btn blurp btnglint-fourth" href="https://discord.gg/g6zNPRWyWV" target="_blank" rel="noopener">💬 Discord</a>
+      </div>
+
+      <!-- Collapsible wrappers for smooth height animation -->
+      <div id="iosWrap" class="collapse">
+        <p id="iosMsg" class="hint">
+          iOS Safari can’t launch FiveM from a browser. Use a desktop with FiveM installed, then click
+          <span class="kbd">Join Server</span> or open <span class="kbd">cfx.re/join/dmqgmq</span>.
+        </p>
+      </div>
+
+      <div id="helpWrap" class="collapse">
+        <p id="help" class="hint">
+          Didn’t get a prompt? Click the <span class="kbd">Join Server</span> button.<br><br>
+          <span style="color:var(--muted)">If the browser asks to open FiveM, allow it.</span><br><br>
+          Direct deep-link: <span class="kbd">fivem://connect/cfx.re/join/dmqgmq</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="footer-line">
+        <span style="color: var(--ink)">©2025 <span class="faccent-alt">Moose</span><span class="faccent"><strong>WRLD</strong></span></span>
+      </div>
+      <div class="footer-line designer">
+        <span style="opacity: 0.6;">Site designed by</span><span class="faccent"> DJ Stomp </span><span style="font-size: 1.2em; color: #ffc30b">★</span>
+        <span style="opacity:0.6;">"No Rights Reserved"</span>
+      </div>
+    </div>
+
+    <div class="glow" style="width:220px;height:220px;background:radial-gradient(circle, rgba(20,212,255,.55), transparent 60%); top:-60px; left:-60px;"></div>
+    <div class="glow" style="width:280px;height:280px;background:radial-gradient(circle, rgba(46,230,166,.35), transparent 60%); bottom:-80px; right:-80px;"></div>
+  </main>
+
+  <script>
+    /**
+     * @const {string} DEEP_LINK - FiveM custom protocol deep link
+     * @const {string} CFX_URL - Web fallback
+     */
+    const DEEP_LINK = "fivem://connect/cfx.re/join/dmqgmq";
+    const CFX_URL   = "https://cfx.re/join/dmqgmq";
+
+    /** Detect likely iOS (incl. iPadOS-on-Mac Safari). */
+    const isIOS = () => {
+      const ua = navigator.userAgent;
+      const iThing = /iPad|iPhone|iPod/.test(ua);
+      const macTouch = /Macintosh/.test(ua) && "ontouchend" in document;
+      return iThing || macTouch;
+    };
+
+    /** Update status chip and activity dot. */
+    function setStatus(text, active=true){
+      document.getElementById("statusText").textContent = text;
+      document.getElementById("dot").style.background = active ? "var(--accent)" : "#3e516b";
+    }
+
+    /**
+     * Smoothly expand a .collapse wrapper (height 0 -> content height), then lock to auto.
+     * Also fades its .hint child via CSS.
+     * @param {HTMLElement|string} elOrId
+     */
+    function expand(elOrId){
+      const el = typeof elOrId === "string" ? document.getElementById(elOrId) : elOrId;
+      if (!el || el.classList.contains("open")) return;
+
+      // Prepare: show, set height to 0 so we can animate to scrollHeight.
+      el.style.display = "block";
+      el.style.height = "0px";
+      // Force reflow so the browser acknowledges the starting height.
+      // eslint-disable-next-line no-unused-expressions
+      el.offsetHeight;
+
+      const target = el.scrollHeight;
+      el.classList.add("open");
+      el.style.height = target + "px";
+
+      // After the transition, set to auto for responsive layout.
+      const onEnd = (e) => {
+        if (e.propertyName !== "height") return;
+        el.style.height = "auto";
+        el.removeEventListener("transitionend", onEnd);
+      };
+      el.addEventListener("transitionend", onEnd);
+    }
+
+    /** Attempt deep link; if page stays visible, reveal help. */
+    function tryLaunch(){
+      window.location.href = DEEP_LINK;
+
+      const t = setTimeout(() => {
+        expand("helpWrap");
+        setStatus("Click Join to launch FiveM", false);
+      }, 2300);
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") {
+          clearTimeout(t);
+          setStatus("Launching FiveM...", true);
+        }
+      }, { once:true });
+    }
+
+    /** Copy cfx.re URL with feedback. */
+    async function copyUrl(){
+      try{
+        await navigator.clipboard.writeText(CFX_URL);
+        setStatus("Link copied to clipboard");
+      }catch{
+        setStatus("Copy failed—long-press to copy the link text", false);
+      }
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", copyUrl);
+
+    if (isIOS()){
+      expand("iosWrap");
+      setStatus("iOS browser cannot open FiveM directly", false);
+    } else {
+      setStatus("Attempting to open FiveM client…");
+      setTimeout(tryLaunch, 300);
+    }
+  </script>
+</body>
+</html>
